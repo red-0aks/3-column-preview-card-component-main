@@ -1,0 +1,135 @@
+/* IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+/* VARIABLES */
+:root{
+    /* GRID ITEMS */
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    /* PARAGRAPHS */
+    --Transparent-white: hsla(0, 0%, 100%, 0.75);
+    /* BACKGROUND, HEADINGS, BUTTONS */
+    --Very-light-gray: hsl(0, 0%, 95%);
+}
+
+/* GLOBAL STYLE */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body{
+    font-size: 15px;
+    color: var(--Very-light-gray);
+    background-color: var(--Very-light-gray);
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+h2{
+    margin: 30px 0;
+    font-size: 34px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-family: 'Big Shoulders Display', cursive;
+}
+
+p{
+    line-height: 1.8;
+    margin-bottom: 100px;
+    color: var(--Transparent-white);
+}
+
+a{
+    transition: 0.3s all ease-in-out;
+    padding: 15px 30px;
+    border-radius: 50px;
+    background-color: var(--Very-light-gray);
+    text-decoration: none;
+}
+
+/* DESKTOP SIZE*/
+.container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-card{
+    margin: 5%;
+    overflow: hidden;
+    max-width: 1020px;
+    display: grid;
+    border-radius: 10px;
+    grid-template-columns: auto auto auto;
+}
+
+.grid-item{
+    padding: 15% 12%;
+}
+
+.grid-item:first-child{ 
+    background-color: var(--Bright-orange); 
+}
+
+.grid-item:first-child a{
+    color: var(--Bright-orange);
+}
+
+.grid-item:nth-child(2){ 
+    background-color: var(--Dark-cyan); 
+}
+
+.grid-item:nth-child(2) a{ 
+    color: var(--Dark-cyan); 
+}
+
+.grid-item:last-child{ 
+    background-color: var(--Very-dark-cyan);
+}
+
+.grid-item:last-child a{ 
+    color: var(--Very-dark-cyan);
+}
+
+.grid-item a:hover{
+    color: var(--Very-light-gray);
+    background-color: transparent;
+    box-shadow: inset 0px 0px 0px 2px var(--Very-light-gray);
+}
+
+/* MOBILE DESIGN */
+@media only screen and (max-width: 1110px){
+    .container{
+        height: 100%;
+    }
+    
+    .grid-card{
+        /* margin: 5%; */
+        max-width: 340px;
+        border-radius: 10px;
+        grid-template-columns: auto;
+    }
+    p {
+        margin-bottom: 30px;
+    }
+}
+
+/* ATTRIBUTION */
+.attribution { 
+    color: var(--Very-dark-cyan);
+    padding: 16px;
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    padding: 0;
+    color: var(--Bright-orange); 
+}
